@@ -1,0 +1,85 @@
+dev:
+  twig:
+    class: \Axis\S1\Twig\Environment\DebugEnvironment
+
+all:
+  twig.loader:
+    class:  Twig_Loader_Filesystem
+    parameters:
+      paths: []
+
+  twig:
+    class: \Axis\S1\Twig\Environment\Environment
+    parameters:
+      loader:   context://twig.loader
+      context:  context://context
+      options:
+        cache:  config://sf_template_cache_dir
+        debug:  config://sf_debug
+      extensions: tag://twig.extension
+
+  twig.extension.template_sugar:
+    class:  \Axis\S1\Twig\Extension\TemplateSugar
+    tag:  twig.extension
+
+# SYMFONY HELPERS EXTENSIONS
+
+  twig.extension.asset_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\AssetHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.cache_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\CacheHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.asset_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\AssetHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.cache_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\CacheHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.date_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\DateHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.debug_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\DebugHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.escaping_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\EscapingHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.helper_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\HelperHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.i18n_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\I18NHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.javascript_base_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\JavascriptBaseHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.number_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\NumberHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.partial_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\PartialHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.tag_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\TagHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.text_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\TextHelper
+    tags: [ twig.extension, twig.extension.helper ]
+
+  twig.extension.url_helper:
+    class: \Axis\S1\Twig\Extension\Helpers\UrlHelper
+    tags: [ twig.extension, twig.extension.helper ]
