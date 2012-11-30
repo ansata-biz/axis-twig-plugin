@@ -16,7 +16,7 @@ Just add `axis/axis-twig-plugin` dependency to your `composer.json` file:
 
 Configuration
 -------------
-You can configure Twig environment using `factories.yml` (see [AxisServiceContainerPlugin](https://github.com/e1himself/axis-service-container-plugin)]).
+You can configure Twig environment using `factories.yml` (see [AxisServiceContainerPlugin](https://github.com/e1himself/axis-service-container-plugin)).
 
 Usage
 -----
