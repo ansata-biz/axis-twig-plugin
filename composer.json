@@ -29,6 +29,7 @@
   "require": {
     "php": ">=5.3.0",
     "composer/installers": "*",
+    "symfony/class-loader": "2.2.x-dev",
     "twig/twig": "dev-master",
     "axis/axis-service-container-plugin": "dev-master"
   }
