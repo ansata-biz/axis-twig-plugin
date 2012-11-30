@@ -36,7 +36,6 @@ class BaseView extends \sfPHPView
 
     $this->configuration = $this->context->getConfiguration();
 
-    // empty array because it changes based on the rendering context
     $this->twig = $this->context->get('twig');
 
     if ($this->twig->isDebug())
