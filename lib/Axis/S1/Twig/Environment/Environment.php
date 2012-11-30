@@ -24,8 +24,8 @@ class Environment extends \Twig_Environment
    */
   public function __construct(\Twig_LoaderInterface $loader, array $options = array(), $context, $extensions = array())
   {
-    parent::__construct($loader, $options);
     $this->context = $context;
+    parent::__construct($loader, $options);
 
     $this->setExtensions($extensions);
   }
