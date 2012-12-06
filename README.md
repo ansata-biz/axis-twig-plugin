@@ -8,7 +8,7 @@ Installation
 ### Composer way
 
 Just add `axis/axis-twig-plugin` dependency to your `composer.json` file:
-```
+```json
 "require": {
   "axis/axis-twig-plugin": "dev-master"
 }
@@ -21,13 +21,13 @@ You can configure Twig environment using `factories.yml` (see [AxisServiceContai
 Usage
 -----
 You can use Twig directly by retrieving Twig Environment from context service container:
-```
+```php
 $twig = sfContext::getInstance()->get('twig');
 $twig->loadTemplate($pathToTemplate)->render($variables);
 ```
 
 or as symfony view by setting it as view class in `module.yml`:
-```
+```php
 all:
   view_class: \Axis\S1\Twig\View\Base # means BaseView
   partial_view_class: \Axis\S1\Twig\View\Base # means BasePartialView
