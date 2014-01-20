@@ -33,7 +33,7 @@ class PartialHelper extends \Twig_Extension
           'include_slot'
         ), array('is_safe' => array('html'))),
 
-      'get_slot' => new \Twig_Function_Function('has_slot'),
+      'get_slot' => new \Twig_Function_Function('get_slot'),
     );
   }
 
