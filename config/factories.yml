@@ -4,9 +4,9 @@ dev:
 
 all:
   twig.loader:
-    class:  Twig_Loader_Filesystem
+    class:  Axis\S1\Twig\Loader\SymfonyFilesystemLoader
     parameters:
-      paths: []
+      application_configuration: context://configuration
 
   twig:
     class: \Axis\S1\Twig\Environment\Environment
